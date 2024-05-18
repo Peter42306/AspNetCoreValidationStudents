@@ -1,14 +1,15 @@
 ﻿using AspNetCoreValidationStudents.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using static AspNetCoreValidationStudents.Models.StudentsContext;
 
 namespace AspNetCoreValidationStudents.Controllers
 {
     public class StudentsController : Controller
     {
-        private readonly StudentContext _context;
+        private readonly StudentsContext _context;
 
-        public StudentsController(StudentContext context)
+        public StudentsController(StudentsContext context)
         {
             _context = context;
         }

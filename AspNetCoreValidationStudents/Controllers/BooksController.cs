@@ -6,9 +6,9 @@ namespace AspNetCoreValidationStudents.Controllers
 {
     public class BooksController : Controller
     {
-        private readonly StudentContext _context;
+        private readonly StudentsContext _context;
 
-        public BooksController(StudentContext context)
+        public BooksController(StudentsContext context)
         {
             _context = context;
         }
@@ -48,7 +48,7 @@ namespace AspNetCoreValidationStudents.Controllers
         // POST: Books/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Author,Year")] Books book)
+        public async Task<IActionResult> Create([Bind("Id,Name,Author,Year")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace AspNetCoreValidationStudents.Controllers
         // POST: Books/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Author,Year")] Books book)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Author,Year")] Book book)
         {
             if (id != book.Id)
             {

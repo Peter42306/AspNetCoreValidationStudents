@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace AspNetCoreValidationStudents.Models
 {
-    public class Books
+    public class Book
     {
         public int Id { get; set; }
 
@@ -14,7 +14,7 @@ namespace AspNetCoreValidationStudents.Models
 
         [Required]
         [Display(Name = "Автор")]
-        [MyAuthors(new string[] { "Шилдт", "Троельсен", "Нейгел", "Рихтер", "Страуструп" }, ErrorMessage = "Недопустимый автор")]
+        [MyAuthors(new string[] { "Albahari","Martin","McConnell","Gorman","Richter","Olsson","Skeet","Stellman","Rodenburg","Feathers","Stroustrup","Schildt" }, ErrorMessage = "Недопустимый автор")]
         public string? Author { get; set; }
 
         [Required]
